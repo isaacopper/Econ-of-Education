@@ -1,0 +1,144 @@
+\documentclass{beamer}
+\usepackage{pgf}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage[hang, bf]{caption}
+\usepackage[english]{babel}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{scalefnt}
+\usepackage{tikz}
+\usepackage{eepic}
+
+\DeclareMathOperator*{\plim}{plim}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\mode<presentation>
+{
+\setbeamercovered{transparent}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+}
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=10pt,
+  draw=structure!80,
+  fill=structure!50,
+  rounded corners=4pt]  {\Large\insertbuttontext};}
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+\title{Returns to Education}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\begin{frame}{Markets in Education}
+Education is a unique marketplace:
+	\begin{itemize}
+	\item It is not perfectly competitive (e.g. large fixed costs, imperfect information);
+	\item Spillovers or externalities are quite common;
+	\item Supply is often local(ish);
+	\item Education is highly differentiated, both vertically (age) and horizontally (different quality/classes for individuals who are the same age);
+	\item The quality of your education (might) depend on the characteristics of other consumers (i.e. your peers).
+	\end{itemize}
+That means that we can use economic tools to answer questions about education policy, but we need to go beyond the simplest models of perfect competition. Although plenty of policy-makers and commentators focus on trying to get the market more toward their perfect competition ideal.
+\end{frame}
+
+\begin{frame}[<+->]{Education as an Investment}
+\begin{itemize}
+%\item Simple economic model:
+%	\begin{itemize}
+%	\item An individual's utility depends on their consumption: $u(c)$
+%	\item Their consumption depends on their wage: $p \cdot c \leq w$
+%	\item Their wage depends on their eduction: $w = w(e)$
+%	\end{itemize}
+\item One of the earliest (and most important) questions in the economic of eduction: what are the returns to eduction?
+	\begin{itemize}
+	\item For now, we will focus on the individual returns to eduction as opposed to the social returns to eduction.  \\~\\
+	\end{itemize}
+\item What do we mean by the ``returns to eduction?" \\~\\
+\item Why do we care about the individual returns to eduction?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{Estimating the Individual Returns to Eduction}
+\begin{itemize}
+\item Let's suppose that you ran an OLS regression:
+	\begin{equation}
+	ln(Y_i) = \beta_0 + \beta_1 Education_i + \epsilon_i
+	\end{equation}
+\item Does $\beta_1$ define the individual returns to education? \\~\\
+\item If not, is $\beta_1$ larger or smaller than the returns to eduction?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Omitted Variable Bias}
+\begin{itemize}
+		\item Let's assume that an individual's outcome $Y_{i}$ is a function of her years of education ($Ed_i$) and ability ($Ability_i$)
+      		  \begin{equation}
+        			Y_{i}=\beta_0+\beta_{1}Ed_{i} +\beta_{2}Ability_{i} +\epsilon
+       		 \end{equation}
+		     \pause
+		 \item What happens if we just estimate our original model, omitting ability?
+      		  \begin{equation}
+        			Y_{i}=\gamma_0+\gamma_{1}Ed_{i} +\mu
+       		 \end{equation}		
+		     \pause
+		\item Using our formula for a regression coefficient  $E(\hat{\gamma_1})=\frac{cov(Y,Ed_i)}{var(Ed_i)}$, and substituting $\alpha+\beta_{1}Ed_{i} +\beta_{2}Ability_{i} +\epsilon$ for $Y_i$, we get:
+		 \begin{equation}
+        			E(\hat{\gamma_1})=\frac{cov(\alpha+\beta_{1}Ed_{i} +\beta_{2}Ability_{i} +\epsilon,Ed_i)}{var(Ed_i)}
+       		 \end{equation}	
+
+	\end{itemize}
+
+\end{frame}
+\begin{frame}{Omitted Variable Bias}
+	\begin{equation}
+        		=\frac{cov(\beta_0,Ed_i)}{var(Ed_i)}+\beta_1 +\beta_{2}\frac{cov(Ability_i,Ed_i)}{var(Ed_i)}+\frac{cov(\epsilon, Ed_i)}{var(Ed_i)}
+       	\end{equation}	
+
+	\begin{itemize}
+		\item The first term is zero since $\beta_0$ is a constant and the last term is also zero given the main OLS assumptions ($cov(\epsilon, X_i)=0$)
+		\pause
+		\item This leaves us with the omitted variable bias formula:
+	\begin{equation}
+        		E(\hat{\gamma_1})=+\beta_1 +\beta_{2}\frac{cov(Ability_i,Ed_i)}{var(Ed_i)}
+       	\end{equation}	
+	\pause	
+	\item Note that the last term $\frac{cov(Ability_i,Ed_i)}{var(Ed_i)}$ is the coefficient from a bivariate regression of $Ability_i$ on $Ed_i$
+	\item OVB is driven by factor(s) that are more correlated with your independent variables of interest and your dependent variable. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{Approaches to Estimating the Returns to Education}
+\begin{itemize}
+\item There are (roughly) six approaches to estimating the returns: \\~\\
+	\begin{enumerate}
+	\item Bound the returns to education \\~\\
+	\item Selection-on-observables \\~\\
+	\item Structural models \\~\\
+	\item Twin studies \\~\\
+	\item Quasi-experimental evidence \\~\\
+	\item Random Control Trials (RCTs)
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+\end{document}
