@@ -1,0 +1,86 @@
+\documentclass{beamer}
+\usepackage{pgf}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage[english]{babel}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{scalefnt}
+\usepackage{tikz}
+\usepackage{eepic}
+
+\DeclareMathOperator*{\plim}{plim}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\mode<presentation>
+{
+\setbeamercovered{transparent}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+}
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=10pt,
+  draw=structure!80,
+  fill=structure!50,
+  rounded corners=4pt]  {\Large\insertbuttontext};}
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+\title{Clark and Martorell (2014)}
+
+\begin{document}
+\maketitle
+\begin{frame}[<+->]{How I Read a Paper}
+\begin{itemize}
+\item Questions:
+	\begin{itemize}
+	\item What is the big picture question it's trying to get at?
+	\item What is the specific question it's answering? \\~\\
+	\end{itemize}
+\item Approach:
+	\begin{itemize}
+	\item What's the ideal variation to answer the question?
+	\item What is the actual variation used to answer the question?
+	\item Suppose there's no actual effect: would the estimated effect be zero? \\~\\
+	\end{itemize}
+\item Findings:
+	\begin{itemize}
+	\item Do I \emph{really} believe the results?
+	\item What else could have been have done to help convince me?
+	\item If you're suddenly President (or CEO) for a day, does it change any of your decisions?
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{Clark and Martorell (2014)}
+\begin{itemize}
+\item They ask whether there is a signaling value to receiving a high school diploma in Texas from 1993-1997.
+\item They use a regression discontinuity approach. Compare those right below the cut-off on a high school exam to those right above.
+\item Pros:
+	\begin{itemize}
+	\item Well done empirically. I trust their empirical findings.
+	\item Did a good job discussing the results, ruling out potential stories, and placing the results in context.
+	\end{itemize}
+\item Cons:
+	\begin{itemize}
+	\item Only 5\% of high school students in Texas. Although these are the individuals that you'd think might need signaling.
+	\item I find the signaling vs. human capital debate in its narrowest sense ``academic." Doesn't change any of my policy beliefs.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
