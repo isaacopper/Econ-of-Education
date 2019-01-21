@@ -1,0 +1,164 @@
+\documentclass{beamer}
+\usepackage{pgf}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage[english]{babel}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{scalefnt}
+\usepackage{tikz}
+\usepackage{eepic}
+
+\DeclareMathOperator*{\plim}{plim}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\mode<presentation>
+{
+\setbeamercovered{transparent}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+}
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=10pt,
+  draw=structure!80,
+  fill=structure!50,
+  rounded corners=4pt]  {\Large\insertbuttontext};}
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+\title{Education Finance}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\begin{frame}{Changes in Education Funding}
+\begin{itemize}
+\item Initially, all education policy was decentralized. 
+	\begin{itemize}
+	\item Lots of small school districts. 
+	\item Almost all funding came from local sources. 
+	\item Education was pretty cheap.
+	\end{itemize}
+\item In 1940:
+	\begin{itemize}
+	\item There were $\sim 120,000$ school districts.
+	\item Per-public expenditures were roughly $\$2,000$ (in 2011 terms).
+	\item Almost $70\%$ that came from local sources.
+	\end{itemize}
+\item By 2010:
+	\begin{itemize}
+	\item There were $\sim 13,000$ school districts.
+	\item Per-public expenditures were roughly $\$12,000$ (in 2011 terms).
+	\item About $40\%$ that came from local sources, about $40\%$ from the state, and about $10\%$.
+	\end{itemize}
+\pause
+\item \textbf{Question:} How did that happen? What caused the changes?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Two Major Changes}
+\begin{itemize}
+\item Elementary and Secondary Education Act (ESEA)
+	\begin{itemize}
+	\item Part of President Lyndon B. Johnson's ``War on Poverty"
+	\item Title I provides funding for low-income students. 
+	\item Increased the federal governments involvement in education and gave it a way to add incentives to schools. 
+		\begin{itemize}
+		\item For example, the No Child Left Behind made the receipt of Title I funds conditional on schools having some form of accountability and required states that received Title I funds to give assessments. \\~\\
+		\end{itemize}
+	\end{itemize}
+\item School Finance Equalizations
+	\begin{itemize}
+	\item Local financing of public schools almost always leads to more inequality. 
+	\item Beginning in the 1970s, numerous state lawsuits argued that the inequality was not constitutional according to state constitutions. 
+	\item This lead to lots of attempts to centralize school financing. 
+		\begin{itemize}
+		\item States varied in the ways they centralized school financing; some did it well and some did not. \\~\\
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{California's History}
+\begin{itemize}
+\item Serrano v Priest (1971)
+	\begin{itemize}
+	\item Education is a fundamental constitutional right and that the inequities produced by local financing violates the equal protection clause of the state constitution. 
+	\item In response, the state legislature passed SB 90 which established a new funding scheme combining state aid and local property taxes to increase parity. \\~\\
+	\end{itemize}
+\item Prop 13 (1978)
+	\begin{itemize}
+	\item Proposition 13 limited local property taxes to 2\% annual increases, leading to much lower revenues for local districts. 
+	\item In response, the state legislature passed AB 8 which shifted lots of tax revenue to local governments and created a state fund to support schools. 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{California's History}
+\begin{itemize}
+\item Authorization of the State Lottery (1984)
+	\begin{itemize}
+	\item In California, like most states, a large chunk of the funds (34\%) collected from the lottery go to schools. \\~\\
+	\end{itemize} 
+\item Prop 98 (1988)
+	\begin{itemize}
+	\item Provides a minimum funding guarantee for school districts. 
+	\item The minimum guarantee depends on the amount of state revenue, so is quite volatile. \\~\\
+	\end{itemize}
+\item Prop 30 (2012)
+	\begin{itemize}
+	\item Increases state income taxes on high earners, with the revenue in part going to fund public schools.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{LAUSD Funding}
+\begin{itemize}
+\item Program Revenue: $\$2.1$ million
+	\begin{itemize}
+	\item $\$1.8$ million of this comes from ``operating grants and contributions" \\~\\
+	\end{itemize}
+\item General Revenue $\$6.7$ million
+	\begin{itemize}
+	\item Property Taxes: $\$2.4$ million
+	\item State Aid: $\$3.9$ million \\~\\
+	\end{itemize}
+\item Overall:
+	\begin{itemize}
+	\item $44\%$ of funding from state aid
+	\item $27\%$ of funding from property taxes
+	\item $21\%$ of funding from operating grants and contributions
+	\item $8\%$ of funding from other sources
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{LAUSD Expenditures}
+\begin{itemize}
+\item Instruction: $\$4.5$ million
+\item Student Support Services: $\$460,000$
+\item Instructional Staff Support Services: $\$584,000$
+\item School Administration Support Services: $\$512,000$
+\item Operation/Maintenance of Plant Services: $\$780,000$
+\item Student Transportation: $\$186,000$
+\item Non-instructional services: $\$528,000$
+\end{itemize}
+\end{frame}
+
+\end{document}
