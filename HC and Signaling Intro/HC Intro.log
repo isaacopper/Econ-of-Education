@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 JAN 2019 09:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  22 JAN 2019 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1025,7 +1025,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 ] [18
 
 ]
-<turner1e_fig_04_01.png, id=544, 208.6194pt x 206.2104pt>
+<turner1e_fig_04_01.png, id=539, 208.6194pt x 206.2104pt>
 File: turner1e_fig_04_01.png Graphic file (type png)
 <use turner1e_fig_04_01.png>
 Package pdftex.def Info: turner1e_fig_04_01.png  used on input line 93.
@@ -1043,7 +1043,7 @@ Overfull \vbox (24.17693pt too high) detected at line 93
 ] [22
 
 ]
-<turner1e_fig_04_04.png, id=653, 211.5102pt x 206.6922pt>
+<turner1e_fig_04_04.png, id=650, 211.5102pt x 206.6922pt>
 File: turner1e_fig_04_04.png Graphic file (type png)
 <use turner1e_fig_04_04.png>
 Package pdftex.def Info: turner1e_fig_04_04.png  used on input line 105.
@@ -1076,7 +1076,7 @@ Overfull \vbox (18.53584pt too high) detected at line 105
 ] [33
 
 ]
-<turner1e_fig_05_01.png, id=958, 207.6558pt x 173.9298pt>
+<turner1e_fig_05_01.png, id=954, 207.6558pt x 173.9298pt>
 File: turner1e_fig_05_01.png Graphic file (type png)
 <use turner1e_fig_05_01.png>
 Package pdftex.def Info: turner1e_fig_05_01.png  used on input line 132.
@@ -1156,7 +1156,7 @@ thkerncmss.
 ] [61
 
 ]
-<turner1e_fig_03_04.png, id=1730, 206.2104pt x 317.988pt>
+<turner1e_fig_03_04.png, id=1728, 206.2104pt x 317.988pt>
 File: turner1e_fig_03_04.png Graphic file (type png)
 <use turner1e_fig_03_04.png>
 Package pdftex.def Info: turner1e_fig_03_04.png  used on input line 215.
@@ -1232,7 +1232,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on "HC Intro.pdf" (65 pages, 416371 bytes).
+Output written on "HC Intro.pdf" (65 pages, 415974 bytes).
 PDF statistics:
  1892 PDF objects out of 2073 (max. 8388607)
  1784 compressed objects within 18 object streams
