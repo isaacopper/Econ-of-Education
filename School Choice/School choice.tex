@@ -1,0 +1,180 @@
+\documentclass{beamer}
+\usepackage{pgf}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage[english]{babel}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{scalefnt}
+\usepackage{tikz}
+\usepackage{eepic}
+
+\DeclareMathOperator*{\plim}{plim}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\mode<presentation>
+{
+\setbeamercovered{transparent}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+}
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=10pt,
+  draw=structure!80,
+  fill=structure!50,
+  rounded corners=4pt]  {\Large\insertbuttontext};}
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+\title{School Choice}
+
+\begin{document}
+\maketitle
+
+\begin{frame}[<+->]{Background of School Choice}
+	\begin{itemize}
+		\item Important to keep in mind that in the US we've ALWAYS had some form of school choice. 
+		\item Its best to think of school choice as a spectrum:
+		\begin{itemize}
+			\item On one end we have a system where school enrollment is dictated purely by home address 
+			\item On the other end we'd have a full market of school choice options with many options for students
+		\end{itemize}
+		\item There are many types of school choice policies and programs
+			\begin{enumerate}
+				\item Private schools
+				\item Charter schools
+				\item Voucher programs
+				\item Inter-/Intra-district choice
+				\item Magnet programs
+				\item Online learning
+				\item Home Schooling
+				\item Others?
+			\end{enumerate}
+	\end{itemize}
+\end{frame}		
+
+
+\begin{frame}[<+->]{Theories Motivating School Choice}
+	\begin{itemize}
+		\item The oldest reason for school choice has been religious freedom (e.g. Catholic schools made up a majority of private schools for a long time).  \\~\\
+		\item Another prominent idea is we should let parents make decisions on how to best educate their kids (e.g. maximize household utility). \\~\\
+		\item More recently people espouse school choice as a mechanism to impose market principles on a public education. \\~\\
+		\item Early charter proponents thought the model would allow for more experimentation, and best practices would make their way back into the traditional public system. \\~\\
+		\item And finally, some argue that it's difficult to both integrate schools and neighborhoods, and through school choice maybe we can do at least one of them well. 
+	
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[<+->]{Assumptions}
+-There are a number of important assumptions to keep in mind with school choice policies. 
+\begin{itemize}
+	\item Demand side (e.g. parents, students, etc.)
+	\begin{itemize}
+		\item Access to adequate information about enrollment processes, school quality, choices, and so on
+		\item Ability to get to the various schools
+		\item Mobility costs
+		\item Tuition or other fees \\~\\
+	\end{itemize}
+	\item Supply side (e.g. schools)
+	\begin{itemize}
+		\item Enough \$ to open a school
+		\item Political environment
+		\item Physical capital
+		\item Economics of school
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[<+->]{Methods to evaluate choice policies}
+	\begin{itemize}
+		\item OLS w/ controls  \\~\\
+		\item Value-added framework (similar to the above) \\~\\
+		\item Student fixed-effects \\~\\
+		\item Matching \\~\\
+		\item Lottery Studies 
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[<+->]{Student fixed-effects}
+	\begin{itemize}
+		\item Between 2000 to 2010 or so, it was common to see researchers use student fixed-effects to estimate the effect of school choice programs and policies
+		\item Conceptually, the approach removes all time-invariant factors among students from the analysis
+		\item There are a number of important drawbacks:
+		\begin{itemize}
+			\item You only identify treatment effects from students who switch among school sectors (e.g. charter to public, or public to charter)
+			\item This is often a small share of the sample. Open question as to whether the effect for ``movers'' and ``stayers'' are similar
+			\item Most approaches assume symmetric effects, (e.g. effect is the same for moving from charter to public as moving from public to charter). 
+			\item Unlikely that movements among school sectors are not related to time-varying student-level factors
+		\end{itemize} 
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[<+->]{Matching}
+	\begin{itemize}
+		\item Matching is also a method that ebbs and flows in acceptance among researchers (also varies among fields)
+		\item Ideally one uses baseline student-level data (e.g. data pre-choice) to match students who did attend a school of choice to students who did not. 
+		\item There are a number of ways to do this, beyond the scope of this class. 
+		\item Method assumes that the reasons students do and do not attend schools of choice are fully captures in observable data. 
+		\item For example, one group of students live near charter schools and another do not, and the decision to live in one of these two neighborhoods is at least conditionally random. 
+		\item Personally, while the method can be a decent way to evaluate choice policies, I'm often left with the unanswerable question: If two students look otherwise observationally similar, why did one decide to attend a school of choice and the other did not?
+		\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[<+->]{Lottery}
+	\begin{itemize}
+		\item Lottery designs typically have the best internal validity
+		\item Rely on random assignment of students to choice schools from usually a non-random sample. 
+		\item As with all methods, these designs have a number of important considerations:
+		\begin{itemize}
+			\item These designs while also often estimating an ITT, produce LATEs
+			\item Often don't help our understanding of the quality of an entire market  since schools with lotteries are likely already better than average (e.g. why they have a waiting list). 
+			\item Selection into the lottery sample is often not well understood, and treatment effect is sensitive to the definition of the counterfactual (all to say context matters). 
+			\item Logistically many schools do not keep good lottery records
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{What we do we know (in a slide)}
+	\begin{itemize}
+		\item Early evidence that private schools produced better student outcomes, but designs relied on selection on observables
+		\item Charters as a large sector, no better or worse than traditional public schools
+		\item In densely populated urban areas, overs subscribed charter schools produce large effects on students math and reading achievement. Effects on long-term outcomes less clear
+		\item Growing voucher evidence is not great for the sector, tends to have null to large negative effects. Many supply side constraints exist, however. 
+		\item Online charter sector looks terrible; huge negative effects on students math and reading achievement. 
+		\item In general, choice literature is mixed and context dependent.   
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[<+->]{What we do we don't know (or know less about)}
+	\begin{itemize}
+		\item General equilibrium effects; very hard to do. 
+		\item What are the unintended effects of choice, on students left behind, system as a whole, teacher behavior, and so on. 
+		\item What is the right size for a charter network? As CMOs grow, will they act more like school districts?
+		\item How do we incorporate multi-dimensional goals of public education into the design of a school system, all while factoring in the many demand side considerations/constraints?  
+	\end{itemize}
+
+\end{frame}
+
+\end{document}
